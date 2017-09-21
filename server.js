@@ -16,7 +16,44 @@ function createtemplate(data){
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
-var htmltemplate=' <!DOCTYPE html><head> ${title}</title><link href="/ui/style.css" rel="stylesheet" /><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><div class="container"><div><a href="/">Home</a></div><br/><h1> ${heading}</h1><div>${date}</div><div>${content} </div></div></body></html>';
+var htmltemplate=`
+
+    <!DOCTYPE html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h>
+            DQ   
+        </h>
+    </head>
+    <body>
+            <div class="container">
+        
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <br/>
+                
+                 <h1>
+                    ${heading}   
+                </h1>
+                
+                 <div>
+                    ${date}
+                </div>
+                
+                <div>
+                    ${content}
+                </div>
+            </div>
+    </body>
+   
+
+</html>
+`;
 return htmltemplate
 }
 
