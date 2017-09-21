@@ -90,7 +90,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 app.get('/:articlename', function (req, res) {
     //aticlename== articleone
-    var articlename=reg.params.articlename;
+    var articlename=req.params.articlename;
   res.send(createtemplate(articles[articlename]));
 });
 app.get('/article-two', function (req, res) {
