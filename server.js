@@ -6,12 +6,12 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
- 'articleone':{ 
+ 'article-one':{ 
     title:'article one/anandhu',
     heading:'article one',
     date:'sept 5 2017',
     content: '<p1>Dulquer Salmaan (born 28 July 1986), also referred popularly as DQ, is an Indian film actor who appears predominantly in Malayalam films.The son of film actor Mammootty, Salmaan graduated with a bachelors degree in Business Management from Purdue University, and worked as a business manager before pursuing a career in acting </p1><p2>Salmaan married architect Amal Sufiya in 2011 with whom he has one daughter. Cited in the media as one of the most attractive Indian celebrities, Salmaan has also been recognised for his fashion style.[3][4] He owns several entrepreneurship ventures and promotes various social causes</p2>'},
- 'articletwo':{
+ 'article-two':{
      title:'article two/anandhu',
     heading:'article two',
     date:'sept 5 2017',
@@ -21,7 +21,7 @@ var articles={
                         Suriya is the eldest son of Tamil film actor Sivakumar and his younger brother Karthi is also an actor. Suriya married co-star Jyothika in 2006, after having been together for several years. In 2008, he began Agaram Foundation, which funds for various philanthropic activities. The year 2012 marked his debut as a television presenter with the Star Vijay game show Neengalum Vellalam Oru Kodi, the Tamil version of Who Wants to Be a Millionaire?. In 2013, Suriya founded the production house 2D Entertainment.
                     </p2>`
 },
- 'articlethree':{
+ 'article-three':{
      title:'article three/anandhu',
     heading:'article three',
     date:'sept 5 2017',
@@ -93,11 +93,13 @@ app.get('/:articlename', function (req, res) {
     var articlename=req.params.articlename;
   res.send(createtemplate(articles[articlename]));
 });
-app.get('/article-two', function (req, res) {
-   res.send(createtemplate(articletwo));
+app.get('/articlename', function (req, res) {
+ var articlename=req.params.articlename;
+  res.send(createtemplate(articles[articlename]));
 });
-app.get('/article-three', function (req, res) {
-  res.send(createtemplate(articlethree));
+app.get('/articlename', function (req, res) {
+ var articlename=req.params.articlename;
+  res.send(createtemplate(articles[articlename]));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
