@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: #07150D;
     margin-top: 75px;
 }
 
@@ -28,9 +28,9 @@ body {
                 padding-top:20px;
                 text-align: justify;
             }
-h3{
-    font-size:14px;
-    color:black;
-    
-    
+h3 {
+    font-size: large;
+    color: black;
+    text-align: left;
+    font-style: normal;
 }
