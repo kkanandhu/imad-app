@@ -8,12 +8,12 @@ var article-one={
     title:'article one/anandhu',
     heading:'article one',
     date:'sept 5 2017',
-    content:{<p1>
+    content: '<p1>
                         Dulquer Salmaan (born 28 July 1986), also referred popularly as DQ, is an Indian film actor who appears predominantly in Malayalam films.The son of film actor Mammootty, Salmaan graduated with a bachelor's degree in Business Management from Purdue University, and worked as a business manager before pursuing a career in acting
                     </p1>
                     <p2>
                         Salmaan married architect Amal Sufiya in 2011 with whom he has one daughter. Cited in the media as one of the most attractive Indian celebrities, Salmaan has also been recognised for his fashion style.[3][4] He owns several entrepreneurship ventures and promotes various social causes
-                    </p2>}
+                    </p2> '
     
 };
 function createtemplate(data){
@@ -21,7 +21,7 @@ function createtemplate(data){
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
-var htmltemplate={
+var htmltemplate='
     
     <!DOCTYPE html>
     <head>
@@ -55,7 +55,7 @@ var htmltemplate={
     </body>
    
 
-</html>};
+</html>';
 return htmltemplate
 }
 
