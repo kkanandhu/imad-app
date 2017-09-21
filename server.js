@@ -88,8 +88,10 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/article-one', function (req, res) {
-  res.send(createtemplate(articleone));
+app.get('/:articlename', function (req, res) {
+    //aticlename== articleone
+    //
+  res.send(createtemplate(articles[articlename]));
 });
 app.get('/article-two', function (req, res) {
    res.send(createtemplate(articletwo));
