@@ -20,3 +20,11 @@ body {
     height: 200px;
 }
 
+ .container{
+               max-width: 800px;
+                margin: 0 auto;
+                font-family: sans-serief;
+                color: #BF1D1D;
+                padding-top: 50px;
+                text-align: justify;
+            }
