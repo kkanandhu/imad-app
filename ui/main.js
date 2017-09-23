@@ -8,7 +8,7 @@ submit.onclick=function(){
    // var list ='<li>'+ names[1] +'</li>';
     for(var i=0;i<=names.length;i++){
         //list<='<li>'+ names[i] +'</li>';
-       var list ='<li>'+ names[1] +'</li>'; 
+       var list ='<li>'+ names[i] +'</li>'; 
     }
     var ul=document.getElementById('namelist');
    ul.innerHTML=list;
