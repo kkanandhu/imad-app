@@ -42,7 +42,7 @@ submit.onclick=function(){
    
              }
          }
-    }
+    };
 var nameinput=document.getElementById('name');
 var name=nameInput.value;
     request.open('GET','http://kkanandhu97.imad.hasura-app.io/submit-name?name='+name,true);
