@@ -19,8 +19,7 @@ button.onclick=function(){
 
 
 
-var nameinput=document.getElementById('name');
-var name=nameinput.value;
+
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     
@@ -29,6 +28,9 @@ submit.onclick=function(){
     request.onreadystatechange=function(){
          if (request.readyState ==XMLHttpRequest.DONE){
              if(request.status == 200){
+                 
+                 var names=request.responseText;
+                 names=JSON.parse(names);
                var names=['name1','name2','name3','name4'];
                 var list='';
             for(var i=0;i<names.length;i++){
@@ -41,8 +43,9 @@ submit.onclick=function(){
              }
          }
     }
-
-    request.open('GET','http://kkanandhu97.imad.hasura-app.io/counter',true);
+var nameinput=document.getElementById('name');
+var name=nameInput.value;
+    request.open('GET','http://kkanandhu97.imad.hasura-app.io/submit-name?name='+name,true);
      request.send(null);
    
 };
