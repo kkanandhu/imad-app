@@ -1,9 +1,9 @@
 console.log('Loaded!');
 
 var img=document.getElementById('madi');
-var marginLeft=1000;
+var marginLeft=100;
 function moveRight(){
-    marginLeft=marginLeft-10;
+    marginLeft=marginLeft-1;
     img.style.marginLeft=marginLeft +'px';
 }
 img.onclick=function(){
