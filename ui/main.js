@@ -9,7 +9,8 @@ submit.onclick=function(){
     for(var i=0;i<names.length;){
         list='<li>'+ i +'</li>';
        var ul=document.getElementById('namelist');
-   ul.innerHTML=list; 
+   ul.innerHTML=list;
+   i++;
     }
    // var ul=document.getElementById('namelist');
   // ul.innerHTML=list;
