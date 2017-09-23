@@ -5,3 +5,4 @@ img.onclik=function(){
    
    img.style.marginright='100px';
 };
+console.log('Loaded!');
