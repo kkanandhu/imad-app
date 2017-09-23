@@ -92,11 +92,13 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/:articlename', function (req, res) {
+
+/*app.get('/:articlename', function (req, res) {
     //aticlename== articleone
     var articlename=req.params.articlename;
   res.send(createtemplate(articles[articlename]));
-});
+});*/
+
 app.get('/ui/article-one.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
