@@ -89,10 +89,10 @@ var htmltemplate=`
 </html>`;
 return htmltemplate
 }*/
-var client= new pool.client(config);
-client.connect();
+var pool= new pool(config);
+
 app.get('/test-db', function (req, res) {
-   client.query('select * from test',function(err,result){
+   pool.query('select * from test',function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
