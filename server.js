@@ -8,7 +8,7 @@ var config={
         database:'kkanandhu97',
         host:'db.imad.hasura-app.io',
         port:'5432',
-        passsword:'db-kkanandhu97-96443'
+        passsword:'process.env.DB_PASSWORD'
         
 };
 var app = express();
@@ -89,7 +89,7 @@ return htmltemplate
 }*/
 var pool= new pool(config);
 app.get('/test-db', function (req, res) {
-   pool.query('select*from test',function(err,result){
+   pool.query('select * from test',function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
