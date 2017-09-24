@@ -88,6 +88,7 @@ var htmltemplate=`
 return htmltemplate
 }*/
 var client= new pg.client(config);
+client.connect();
 app.get('/test-db', function (req, res) {
    client.query('select * from test',function(err,result){
       if(err){
