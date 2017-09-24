@@ -87,7 +87,7 @@ var htmltemplate=`
 </html>`;
 return htmltemplate
 }*/
-var pool= new pool(config);
+//var pool= new pool(config);
 app.get('/test-db', function (req, res) {
    pool.query('select*from test',function(err,result){
       if(err){
