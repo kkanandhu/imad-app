@@ -12,7 +12,7 @@ var pool = require('pg').pool;
         
 };*/
 
-var config = "pg://kkanandhu97:process.env.DB_PASSWORD@db.imad.hasura-app.io:5432/kkanandhu97";
+var config = "pool://kkanandhu97:process.env.DB_PASSWORD@db.imad.hasura-app.io:5432/kkanandhu97";
 var app = express();
 app.use(morgan('combined'));
 
@@ -89,7 +89,7 @@ var htmltemplate=`
 </html>`;
 return htmltemplate
 }*/
-var client= new pg.client(config);
+var client= new pool.client(config);
 client.connect();
 app.get('/test-db', function (req, res) {
    client.query('select * from test',function(err,result){
