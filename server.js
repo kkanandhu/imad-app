@@ -3,14 +3,14 @@ var morgan = require('morgan');
 var path = require('path');
 var pool=require('pg').pool;
 
-var config={
+var config=pg. createConnection({
         user:'kkanandhu97',
         database:'kkanandhu97',
         host:'db.imad.hasura-app.io',
         port:'5432',
         passsword:'process.env.DB_PASSWORD'
         
-};
+});
 var app = express();
 app.use(morgan('combined'));
 
@@ -87,7 +87,16 @@ var htmltemplate=`
 </html>`;
 return htmltemplate
 }*/
-
+var pool= new pool(config);
+app.get('/test-db', function (req, res) {
+   pool.query('select*from test',function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }else{
+          res.send(JSON.stringify(result)); 
+      }
+   }); 
+});
 
 
 app.get('/', function (req, res) {
