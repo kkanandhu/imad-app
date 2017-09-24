@@ -12,7 +12,7 @@ var pool = require('pg').pool;
         
 };*/
 
-var config = "pg://kkanandhu97:process.env.DB_PASSWORD@localhost:5432/kkanandhu97";
+var config = "pg://kkanandhu97:process.env.DB_PASSWORD@db.imad.hasura-app.io:5432/kkanandhu97";
 var app = express();
 app.use(morgan('combined'));
 
