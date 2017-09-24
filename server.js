@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-/*var pool=requie('pg').pool;
+var pool=requie('pg').pool;
 
 var config={
         user:'kkanandhu97',
@@ -10,7 +10,7 @@ var config={
         port:'5432',
         passsword:'process.env.DB_PASSWORD'
         
-};*/
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -86,7 +86,7 @@ var htmltemplate=`
 
 </html>`;
 return htmltemplate
-}
+}*/
 var pool=new pool(config);
 app.get('/test-db', function (req, res) {
    pool.query('select*from test',function(err,result){
@@ -96,7 +96,7 @@ app.get('/test-db', function (req, res) {
           res.send(JSON.stringify(result)); 
       }
    }); 
-});*/
+});
 
 
 app.get('/', function (req, res) {
